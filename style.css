@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
@@ -42,9 +46,16 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.project-link:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.9rem;
 }
 
 /* NAVBAR */
@@ -67,7 +78,8 @@ body {
     transition: color 0.3s, transform 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
     color: #38bdf8;
     transform: scale(1.1);
 }
@@ -92,7 +104,9 @@ body {
 }
 
 .card {
-    background: #020617;
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(56, 189, 248, 0.1);
     padding: 25px;
     border-radius: 15px;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -112,9 +126,17 @@ body {
 
 .profil-card img {
     width: 160px;
+    max-width: 30%;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
     transition: transform 0.3s;
+}
+
+@media (max-width: 768px) {
+    .profil-card img {
+        max-width: 40%;
+    }
 }
 
 .profil-card img:hover {
