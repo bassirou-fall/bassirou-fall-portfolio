@@ -1,10 +1,15 @@
-# GitHub Update Progress
+# GitHub Update Progress - COMPLETÉ
 
-## Plan approuvé pour mise à jour GitHub
+## Plan exécuté
 - [x] Step 1: Créer TODO.md avec étapes
-- [ ] Step 2: git add .
-- [ ] Step 3: git commit -m "Mise à jour portfolio: corrections finales et améliorations design"
-- [ ] Step 4: git push origin main
-- [ ] Step 5: Vérifier repo GitHub mis à jour
+- [x] Step 2: git add .
+- [x] Step 3: git commit -m "Mise à jour portfolio: corrections finales et améliorations design"
+- [x] Step 4: git push origin main
+- [x] Step 5: Vérifier repo GitHub mis à jour
+- [ ] Step 6: Ajouter un projet dédié Power BI (dashboard Global Superstore) dans `index.html`
+- [ ] Step 7: git add . && git commit -m "Ajout projet Power BI" && git push origin main
+- [ ] Step 8: Vérifier sur GitHub / GitHub Pages
 
-**Prochaine étape: Exécuter commandes Git.**
+**Repo GitHub: https://github.com/bassirou-fall/bassirou-fall-portfolio**
+**Live (si GitHub Pages activé): start https://bassirou-fall.github.io/bassirou-fall-portfolio**
+
