@@ -9,8 +9,9 @@
 - [x] Step 6: Ajouter un projet dédié Power BI (dashboard Global Superstore) dans `index.html`
 - [x] Step 7: git add . && git commit -m "Ajout projet Power BI" && git push origin main
 - [ ] Step 8: Vérifier sur GitHub / GitHub Pages
-
+- [ ] Step 9: Remplacer le lien LinkedIn dans le header (ID #linkedin-link)
 
 **Repo GitHub: https://github.com/bassirou-fall/bassirou-fall-portfolio**
 **Live (si GitHub Pages activé): start https://bassirou-fall.github.io/bassirou-fall-portfolio**
+
 

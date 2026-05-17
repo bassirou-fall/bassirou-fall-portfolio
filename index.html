@@ -12,7 +12,15 @@
 <header class="hero">
     <h1>Bassirou FALL</h1>
     <p>Ingénieur Numérique & Mathématique</p>
-    <a href="#contact" class="btn">Me contacter</a>
+    <div class="hero-actions">
+        <a href="#contact" class="btn">Me contacter</a>
+        <a href="CV.pdf" download class="btn hero-secondary">Télécharger mon CV</a>
+    </div>
+
+    <div class="hero-links" aria-label="Liens du portfolio">
+        <a class="project-link" href="https://github.com/bassirou-fall/bassirou-fall-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="project-link" href="https://www.linkedin.com/" id="linkedin-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
 </header>
 
 <nav class="navbar">
@@ -29,11 +37,22 @@
     <h2>À propos de moi</h2>
     <div class="card profil-card reveal">
         <img src="mon_image.jpeg" alt="Bassirou Fall">
-        <p>
-            Étudiant en Master 2 Ingénierie Numérique et Mathématique à l’Université Cheikh Anta Diop de Dakar (UCAD), je possède des compétences avancées en optimisation, analyse numérique, analyse et traitement des données, ainsi qu’en machine learning et deep learning.
-            Mon parcours m’a permis de développer une approche rigoureuse de la modélisation mathématique et de l’exploitation de données, complétée par des connaissances en développement web et mobile.
-            Je cherche à travers ce portfolio à présenter mes projets académiques et personnels, illustrant ma capacité à appliquer les concepts théoriques à des problématiques concrètes et innovantes.
-        </p>
+        <div>
+            <p>
+                Je m’appelle <strong>Bassirou Fall</strong>, étudiant en Master 2 Ingénierie Numérique et Mathématique à l’UCAD (Dakar). Mon objectif est simple : transformer les données en décisions utiles.
+            </p>
+            <p>
+                J’aime relier la rigueur des mathématiques à l’impact concret du Data Science : optimisation, analyse numérique, machine learning et deep learning. En parallèle, je prends plaisir à construire des interfaces claires (web) et des visualisations qui racontent une histoire (BI).
+            </p>
+            <p>
+                Ce portfolio regroupe mes projets académiques et personnels — avec un focus sur la qualité du traitement des données et la pertinence des résultats.
+            </p>
+            <ul class="about-highlights">
+                <li><strong>Data</strong> : Power BI, Power Query, DAX, analytics</li>
+                <li><strong>Modélisation</strong> : optimisation & résolution numérique</li>
+                <li><strong>Développement</strong> : Python, SQL, web</li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -116,6 +135,13 @@
         <div class="card project reveal">
             <h3>Global Superstore Analysis Dashboard – Power BI</h3>
             <p>Création d’un dashboard interactif, transformation des données avec Power Query, création de KPI et mesures DAX, analyse des ventes, profits, clients et régions.</p>
+            <div class="project-media">
+                <img src="Global Superstore Analysis Dashboard.jpeg" alt="Capture du dashboard Power BI" class="project-screenshot">
+            </div>
+            <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">Voir le dashboard (lien)</a>
+                <a href="https://github.com/bassirou-fall/bassirou-fall-portfolio" class="project-link" target="_blank" rel="noopener noreferrer">Voir le repo</a>
+            </div>
         </div>
         <div class="card project reveal">
             <h3>Applications Web</h3>
