@@ -5,7 +5,7 @@
 /* ▼▼▼ À COMPLÉTER : tes liens personnels ▼▼▼
    Laisse vide ("") pour masquer automatiquement le lien. */
 const LIENS = {
-  linkedin: "",   // ex. "https://www.linkedin.com/in/ton-profil/"
+       linkedin: "https://www.linkedin.com/in/bassirou-fall-3074a7183/",
   whatsapp: "",   // numéro au format international sans "+", ex. "221781036379"
 };
 /* ▲▲▲ ------------------------------------------ ▲▲▲ */
