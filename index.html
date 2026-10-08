@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bassirou Fall — Data Science & Modélisation</title>
+  <meta name="description" content="Bassirou Fall — Data Science & Modélisation, Master 2 Ingénieries Numériques et Mathématiques (UCAD, Dakar). En stage de fin d'études à la SENELEC.">
+  <meta name="author" content="Bassirou Fall">
+  <meta name="theme-color" content="#0b0f17">
+
+  <!-- Partage (LinkedIn, WhatsApp…) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bassirou Fall — Data Science & Modélisation">
+  <meta property="og:description" content="Je transforme des données en décisions : data science, modélisation numérique et dashboards Power BI.">
+  <meta property="og:url" content="https://bassirou-fall.github.io/bassirou-fall-portfolio/">
+  <meta property="og:image" content="https://bassirou-fall.github.io/bassirou-fall-portfolio/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bassirou Fall — Data Science, Modélisation, Business Intelligence">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://bassirou-fall.github.io/bassirou-fall-portfolio/">
+  <meta property="og:locale" content="fr_FR">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2322d3ee'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%230b0f17'%3EBF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Applique le thème sauvegardé avant l'affichage (évite le flash) -->
+  <script>
+    document.documentElement.classList.remove("no-js");
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+
+<!-- Icônes SVG réutilisables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+  <symbol id="i-sigma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 7V4H6l6 8-6 8h12v-3"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></symbol>
+</svg>
+
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+
+<!-- NAVIGATION -->
+<header class="topbar" id="topbar">
+  <div class="topbar-inner">
+    <a href="#accueil" class="brand" aria-label="Retour en haut">
+      <span class="brand-mark">BF</span>
+      <span class="brand-name">Bassirou Fall</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#experience">Expérience</a>
+      <a href="#competences">Compétences</a>
+      <a href="#projets">Projets</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="topbar-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Changer de thème">
+        <svg class="ico ico-sun"><use href="#i-sun"/></svg>
+        <svg class="ico ico-moon"><use href="#i-moon"/></svg>
+      </button>
+      <a href="CV.pdf" download class="btn btn-sm btn-primary hide-sm">CV</a>
+      <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <svg class="ico"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Ouvert aux opportunités en data</p>
+        <p class="role">Data Science & Modélisation — Master 2</p>
+        <h1>Je transforme les données en <span class="accent">décisions</span>.</h1>
+        <p class="lead">
+          Étudiant en <strong>Master 2 Ingénieries Numériques et Mathématiques</strong> (UCAD), en stage de fin d'études
+          à la SENELEC, sur la modélisation de la consommation nationale d'électricité.
+          Je relie la rigueur mathématique au machine learning pour livrer des résultats fiables et directement utilisables.
+        </p>
+        <div class="hero-cta">
+          <a href="#projets" class="btn btn-primary">Voir mes projets <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a href="CV.pdf" download class="btn btn-ghost"><svg class="ico"><use href="#i-download"/></svg> Télécharger mon CV</a>
+        </div>
+        <ul class="hero-social" aria-label="Réseaux">
+          <li><a href="https://github.com/bassirou-fall" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="ico"><use href="#i-github"/></svg></a></li>
+          <li data-link="linkedin"><a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="ico"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="mailto:bassfall439@gmail.com" aria-label="Email"><svg class="ico"><use href="#i-mail"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <img src="photo.jpg" alt="Portrait de Bassirou Fall" width="720" height="960">
+        </div>
+        <div class="float-card fc-1" aria-hidden="true">
+          <span class="fc-label">Stack</span>
+          <span class="fc-value">Python · SQL · Power BI</span>
+        </div>
+        <div class="float-card fc-2" aria-hidden="true">
+          <span class="fc-label">Base</span>
+          <span class="fc-value">Maths appliquées</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section class="section" id="apropos">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">01 — À propos</p>
+        <h2>Des maths solides, au service de résultats concrets</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Étudiant en Master 2 <strong>Ingénieries Numériques et Mathématiques</strong> à l'Université Cheikh Anta Diop de Dakar,
+            spécialisé en data science, analyse et ingénierie des données, je réalise actuellement mon stage de fin d'études à la SENELEC.
+          </p>
+          <p>
+            Ce qui me motive : partir de données brutes, comprendre ce qu'elles disent vraiment, et livrer
+            un résultat clair et exploitable — un modèle fiable, un tableau de bord lisible ou une analyse qui aide à décider.
+          </p>
+          <p>
+            Ma formation mathématique (optimisation, EDP, analyse numérique, probabilités) me permet de comprendre
+            les méthodes que j'utilise, pas seulement de les appliquer.
+          </p>
+        </div>
+
+        <ul class="about-points reveal">
+          <li>
+            <svg class="ico"><use href="#i-chart"/></svg>
+            <div><strong>Analyse & BI</strong><span>Nettoyage, exploration, KPI et dashboards Power BI interactifs.</span></div>
+          </li>
+          <li>
+            <svg class="ico"><use href="#i-sigma"/></svg>
+            <div><strong>Modélisation</strong><span>Machine learning, statistiques, optimisation et simulation numérique.</span></div>
+          </li>
+          <li>
+            <svg class="ico"><use href="#i-code"/></svg>
+            <div><strong>Développement</strong><span>Python, SQL, applications web et mobiles (Flutter).</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">02 — Expérience</p>
+        <h2>Ce que je fais aujourd'hui</h2>
+      </div>
+
+      <article class="exp-card reveal">
+        <div class="exp-head">
+          <div>
+            <h3>Stage de fin d'études — Data science</h3>
+            <p class="exp-org">SENELEC · Département Exploitation du Système Électrique · Dakar</p>
+          </div>
+          <span class="exp-date">En cours</span>
+        </div>
+        <div class="exp-subject">
+          <span>Sujet de stage</span>
+          <p>Étude et modélisation de l'impact de la température, de l'humidité et du vent sur la consommation nationale d'électricité — Cas de Dakar et des régions du Sénégal</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section class="section" id="competences">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">03 — Compétences</p>
+        <h2>Ma boîte à outils</h2>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-code"/></svg> Langages</h3>
+          <ul class="chips">
+            <li>Python</li><li>SQL</li><li>C</li><li>HTML / CSS / JavaScript</li><li>PHP</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-sigma"/></svg> Data science</h3>
+          <ul class="chips">
+            <li>Pandas</li><li>NumPy</li><li>Régression</li><li>KNN</li><li>Classification</li><li>Réseaux de neurones (bases)</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-chart"/></svg> Séries temporelles</h3>
+          <ul class="chips">
+            <li>Analyse et prévision</li><li>Modélisation de la consommation</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-chart"/></svg> Visualisation & BI</h3>
+          <ul class="chips">
+            <li>Power BI</li><li>Power Query</li><li>DAX</li><li>Plotly</li><li>Matplotlib</li><li>Streamlit</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-sigma"/></svg> Mathématiques</h3>
+          <ul class="chips">
+            <li>Optimisation (linéaire, non linéaire, KKT)</li><li>EDP</li><li>Analyse numérique</li><li>Probabilités</li><li>Statistiques</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-db"/></svg> Autres</h3>
+          <ul class="chips">
+            <li>Jupyter</li><li>Flutter</li><li>Conception de bases de données</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="extras-grid">
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-pin"/></svg> Langues</h3>
+          <ul class="rows"><li><span>Français</span><span>Courant</span></li><li><span>Anglais</span><span>Intermédiaire</span></li></ul>
+        </article>
+        <article class="skill-card reveal">
+          <h3><svg class="ico"><use href="#i-pin"/></svg> Centres d'intérêt</h3>
+          <ul class="chips"><li>Course à pied</li><li>E-commerce</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section class="section section-alt" id="projets">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">04 — Projets</p>
+        <h2>Ce que j'ai construit</h2>
+        <p class="section-sub">Projets académiques et personnels, de l'analyse de données à la simulation numérique.</p>
+      </div>
+
+      <!-- Projet phare -->
+      <article class="featured reveal">
+        <button class="featured-media" type="button" data-lightbox="dashboard-global-superstore.jpg" aria-label="Agrandir la capture du dashboard">
+          <img src="dashboard-global-superstore.jpg" alt="Dashboard Power BI Global Superstore : KPI ventes, profit, commandes, clients et marge, avec graphiques par catégorie, région, année et segment" width="760" height="428">
+          <span class="zoom-hint">Cliquer pour agrandir</span>
+        </button>
+        <div class="featured-body">
+          <p class="tag-line">Projet phare · Business Intelligence</p>
+          <h3>Global Superstore — Dashboard d'analyse des ventes</h3>
+          <p>
+            Analyse de 9,5 M de ventes et 25 K commandes d'un distributeur mondial (2011–2014) :
+            Power Query, mesures DAX, KPI et filtres interactifs par année, région, pays, catégorie et segment.
+          </p>
+          <dl class="kpis">
+            <div><dt>Chiffre d'affaires analysé</dt><dd>9,48 M</dd></div>
+            <div><dt>Profit</dt><dd>1,09 M</dd></div>
+            <div><dt>Commandes</dt><dd>25 K</dd></div>
+            <div><dt>Marge</dt><dd>11,5 %</dd></div>
+          </dl>
+          <ul class="tags"><li>Power BI</li><li>Power Query</li><li>DAX</li><li>Data visualisation</li></ul>
+          <div class="card-links">
+            <a class="link" href="mailto:bassfall439@gmail.com?subject=Dashboard%20Power%20BI%20Global%20Superstore">Demander le fichier .pbix <svg class="ico"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <p class="tag-line">Optimisation</p>
+          <h3>Optimisation sous contraintes</h3>
+          <p>Méthode de Newton et conditions KKT implémentées en Python.</p>
+          <ul class="tags"><li>Python</li><li>NumPy</li><li>KKT</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <p class="tag-line">Simulation numérique</p>
+          <h3>Résolution numérique d'EDP</h3>
+          <p>Simulation des équations de la chaleur et des ondes (NumPy, Matplotlib).</p>
+          <ul class="tags"><li>Python</li><li>NumPy</li><li>Matplotlib</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <p class="tag-line">Bases de données</p>
+          <h3>Base de données relationnelle</h3>
+          <p>Conception d'un modèle relationnel et requêtes SQL.</p>
+          <ul class="tags"><li>SQL</li><li>Modélisation</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <p class="tag-line">Statistiques</p>
+          <h3>Simulation & analyse statistique</h3>
+          <p>Simulation d'expériences aléatoires et analyse statistique de données simulées (Python).</p>
+          <ul class="tags"><li>Python</li><li>Probabilités</li><li>Statistiques</li></ul>
+        </article>
+        <article class="project-card reveal">
+          <p class="tag-line">Web</p>
+          <h3>Applications web responsives</h3>
+          <p>Sites dynamiques en HTML/CSS/JS/PHP connectés à une base de données.</p>
+          <ul class="tags"><li>PHP</li><li>JavaScript</li><li>SQL</li></ul>
+        </article>
+      </div>
+
+      <p class="more reveal">
+        <a class="link" href="https://github.com/bassirou-fall" target="_blank" rel="noopener noreferrer">
+          <svg class="ico"><use href="#i-github"/></svg> Voir mon GitHub <svg class="ico"><use href="#i-arrow"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- PARCOURS -->
+  <section class="section" id="parcours">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">05 — Parcours</p>
+        <h2>Formation</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="reveal">
+          <span class="tl-date">2024 – en cours</span>
+          <h3>Master 2 — Ingénieries Numériques et Mathématiques</h3>
+          <p class="tl-place">Université Cheikh Anta Diop (UCAD), Dakar</p>
+          <p>Data science, analyse et ingénierie des données, machine learning, méthodes numériques.</p>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2023 – 2024</span>
+          <h3>Master 1 — Ingénieries Numériques et Mathématiques</h3>
+          <p class="tl-place">Université Cheikh Anta Diop (UCAD), Dakar</p>
+          <p>Optimisation, EDP, méthodes numériques, probabilités, statistiques, bases de données, Python.</p>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2022 – 2023</span>
+          <h3>Licence Mathématiques, Physique et Informatique</h3>
+          <p class="tl-place">Université Cheikh Anta Diop (UCAD), Dakar</p>
+        </li>
+        <li class="reveal">
+          <span class="tl-date">2018 – 2019</span>
+          <h3>Baccalauréat scientifique (S2)</h3>
+          <p class="tl-place">Lycée Valdiodio Ndiaye, Kaolack</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <p class="kicker">06 — Contact</p>
+        <h2>Un projet, un stage, une question ?</h2>
+        <p class="section-sub">Je réponds rapidement. Le plus simple : un email.</p>
+
+        <div class="contact-main">
+          <a class="btn btn-primary btn-lg" href="mailto:bassfall439@gmail.com">
+            <svg class="ico"><use href="#i-mail"/></svg> bassfall439@gmail.com
+          </a>
+          <button class="btn btn-ghost btn-lg" type="button" id="copy-email" data-email="bassfall439@gmail.com">
+            <svg class="ico"><use href="#i-copy"/></svg> <span>Copier l'adresse</span>
+          </button>
+        </div>
+
+        <ul class="contact-list">
+          <li><svg class="ico"><use href="#i-phone"/></svg> <a href="tel:+221781036379">+221 78 103 63 79</a></li>
+          <li data-link="whatsapp"><svg class="ico"><use href="#i-whatsapp"/></svg> <a href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li data-link="linkedin"><svg class="ico"><use href="#i-linkedin"/></svg> <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><svg class="ico"><use href="#i-github"/></svg> <a href="https://github.com/bassirou-fall" target="_blank" rel="noopener noreferrer">github.com/bassirou-fall</a></li>
+          <li><svg class="ico"><use href="#i-pin"/></svg> Dakar, Sénégal</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Bassirou Fall</p>
+    <p class="footer-sub">Data Science & Modélisation — Master 2</p>
+    <a href="#accueil" class="link">Haut de page ↑</a>
+  </div>
+</footer>
+
+<!-- Visionneuse d'image -->
+<dialog class="lightbox" id="lightbox" aria-label="Capture agrandie">
+  <button class="icon-btn lightbox-close" type="button" aria-label="Fermer">✕</button>
+  <img src="" alt="">
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
